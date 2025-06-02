@@ -17,6 +17,18 @@ pipeline {
       }
     }
 
+    stage('Setup Node.js') {
+            steps {
+                sh '''
+                    apt-get update && apt-get install -y curl
+                    curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+                    apt-get install -y nodejs
+                    node -v
+                    npm -v
+                '''
+            }
+        }
+
     stage('Install Dependencies') {
       steps {
         sh 'npm install'
