@@ -1,12 +1,12 @@
 pipeline {
    agent {
-          docker { image 'openjdk:17-jdk-slim';
-          args '-u root --network ci-network -v /var/run/docker.sock:/var/run/docker.sock' }
+          docker { image 'stanoz03/custom-jenkins-agent:1.0.1';
+          args '-u root --network tdo_lab13_ci-network -v /var/run/docker.sock:/var/run/docker.sock' }
       }
 
   environment {
     SONARQUBE_SERVER = 'SonarQube'
-    SONARQUBE_URL = 'http://sonarqube:9000'
+    SONARQUBE_URL = 'http://localhost:9000'
     SONAR_TOKEN = credentials('sonarqube-token-id')
   }
 
