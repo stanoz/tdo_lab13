@@ -44,15 +44,15 @@ pipeline {
       steps {
         sh 'npm test'
       }
-      // post {
-      //     always {
-      //         publishHTML(target: [
-      //             reportDir: 'coverage/lcov-report',
-      //             reportFiles: 'index.html',
-      //             reportName: 'Coverage Report'
-      //          ])
-      //     }
-      // }
+      post {
+          always {
+              publishHTML(target: [
+                  reportDir: 'coverage/lcov-report',
+                  reportFiles: 'index.html',
+                  reportName: 'Coverage Report'
+               ])
+          }
+      }
     }
 
     stage('SonarQube Analysis') {
