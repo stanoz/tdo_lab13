@@ -63,7 +63,8 @@ pipeline {
                       returnStdout: false
                   )
               }
+            }
         }
     }
-  }
+    }
 }
