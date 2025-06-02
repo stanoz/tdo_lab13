@@ -1,6 +1,6 @@
 pipeline {
    agent {
-          docker { image 'stanoz03/custom-jenkins-agent:1.0.1';
+          docker { image 'openjdk:17-jdk-slim';
           args '-u root --network ci-network -v /var/run/docker.sock:/var/run/docker.sock' }
       }
 
