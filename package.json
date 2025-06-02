@@ -5,7 +5,8 @@
   "main": "src/add.js",
   "scripts": {
     "test": "jest --coverage",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "build": "node build ./src/add.js"
   },
   "devDependencies": {
     "eslint": "^8.57.1",
