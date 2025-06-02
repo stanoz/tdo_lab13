@@ -1,0 +1,14 @@
+{
+  "name": "simple-add-js",
+  "version": "1.0.0",
+  "description": "Add two numbers",
+  "main": "src/add.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint src/"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0"
+  }
+}
